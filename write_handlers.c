@@ -137,6 +137,18 @@ int write_num(int ind, char buffer[],
 		buffer[--ind] = extra_c;
 	return (write(1, &buffer[ind], length));
 }
+/**
+ * write_unsgnd - Writes an unsigned number
+ * @is_negative: Number indicating if the num is negative
+ * @ind: Index at which the number starts in the buffer
+ * @buffer: Array of chars
+ * @flags: Flags specifiers
+ * @width: Width specifier
+ * @precision: Precision specifier
+ * @size: Size specifier
+ *
+ * Return: Number of written chars.
+ */
 int write_unsgnd(int is_negative, int ind,
 	char buffer[],
 	int flags, int width, int precision, int size)
